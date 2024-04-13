@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../assets/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    backdrop-filter: blur(30px);
+}
+
+.main {
+    width: auto;
+    height: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.left {
+    width: 350px;
+    height: 480px;
+    background-color: rgb(37, 35, 31);
+    backdrop-filter: blur(690px);
+    border: 4px solid rgba(133, 133, 133, 0.212);
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 100px;
+    z-index: 22;
+}
+
+.right {
+    width: 350px;
+    height: 480px;
+    background-color: transparent;
+    backdrop-filter: blur(99px);
+    border: 4px solid rgba(133, 133, 133, 0.212);
+    border-radius: 15px;
+    position: relative;
+    transform: translateX(-260px);
+    transition: .4s ease-out;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+    border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 30px;
+}
+
+.right-1 {
+    width: 350px;
+    height: 480px;
+    border-radius: 15px;
+    position: relative;
+    transform: translateX(100px);
+    transition: .4s ease-out;
+}
+
+
+.switch {
+    position: relative;
+    top: 10px;
+    left: 150px;
+    color: rgb(9, 17, 20);
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.left-arrow {
+    transform: rotateY(180deg);
+    transition: .1s ease-out;
+}
+
+.fa-angles-right {
+    transition: .1s ease-out;
+}
+
+
+.image {
+    width: 330px;
+    height: 250px;
+    border: 1px solid rgba(133, 133, 133, 0.212);
+    margin-top: 12px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 5px 5px 80px #fb833e;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+.progressTime {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 2px;
+    margin-top: 50px;
+    align-items: center;
+    padding: 0 5px;
+}
+
+
+.progresbar {
+    width: 70%;
+    height: 5px;
+    border: 1px solid rgba(133, 133, 133, 0.212);
+    border-radius: 10px;
+    position: relative;
+}
+
+.bar {
+    position: absolute;
+    top: 0;
+    width: 0%;
+    height: 4px;
+    background-color: rgb(88, 58, 0);
+}
+
+
+
+.btns {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    font-size: 36px;
+    gap: 40px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.fa-play {
+    visibility: visible;
+    opacity: 1;
+}
+
+.fa-pause {
+    position: absolute;
+    left: 110px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+.active {
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+    left: 160px;
+}
+
+.deactive {
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+.m-info {
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    padding-left: 8px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.song-name {
+    width: 100%;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #fb843e;
+    text-shadow: 2px 5px 20px #fb833e;
+}
+
+.artist-name {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fb843e;
+    text-shadow: 2px 5px 20px #fb833e;
+}
+
+ul {
+    padding: 5px 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+ul li {
+    list-style-type: none;
+    width: 100%;
+    height: auto;
+    padding: 8px 10px;
+    color: #311a0c;
+    font-size: 20px;
+    font-weight: 600;
+    border: 1px solid rgba(133, 133, 133, 0.212);
+    margin-bottom: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.currentEl{
+    color: #fb843e;
+    font-weight: 700;
+    padding-left: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.durationEl{
+    color: #fb843e;
+    font-weight: 700;
+    padding-right: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
